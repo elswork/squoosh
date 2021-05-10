@@ -14,7 +14,6 @@ LABEL mantainer="Eloy Lopez <elswork@gmail.com>" \
     org.label-schema.vendor="Deft Work" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
-#Estoy agregando esto de prueba
 
 # RUN apk add --no-cache squoosh
 RUN npm i -g @squoosh/cli
