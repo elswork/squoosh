@@ -11,8 +11,8 @@ OPT ?= -lossless
 DIR ?= $$(pwd)/data
 EXT ?= png
 FILE ?= deftwork
-MODE ?= debug
-#MODE ?= $(VER)
+#MODE ?= debug
+MODE ?= $(VER)
 
 # HELP
 # This will output the help for each task
@@ -62,4 +62,4 @@ buildx: ## Buildx the container
 console: ## Start console in container
 	docker run -it --rm -v $(DIR):/data --entrypoint "/bin/ash" $(RNAME):$(MODE)
 start: ## Start an container command
-	docker run --rm -v $(DIR):/data $(RNAME):$(MODE) $(PARAM)
+	docker run -it --rm -v $(DIR):/data $(RNAME):$(MODE) $(PARAM)

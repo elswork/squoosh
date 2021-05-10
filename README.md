@@ -1,6 +1,6 @@
 # squoosh
 
-A [Docker](http://docker.com) file to build [squoosh](https://github.com/GoogleChromeLabs/squoosh).
+A [Docker](http://docker.com) file to build [squoosh-cli](https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli) an experimental way to run all the codecs you know from the [squoosh](https://squoosh.app/).
 
 > Be aware! You should read carefully the usage documentation of every tool!
 
@@ -24,12 +24,19 @@ This image has been builded using [buildx](https://docs.docker.com/buildx/workin
 ### Start container
 
 ```bash
-docker run --rm elswork/squoosh \
+docker run -it --rm elswork/squoosh \
  someparameter
 ```
 or
 ```bash
 make start PARAM=someparameter
 ```
+Example of usage:
+
+```bash
+docker run -it --rm elswork/squoosh \
+ squoosh-cli --webp auto cover.jpg
+```
+
 ---
 **[Sponsor me!](https://github.com/sponsors/elswork) Together we will be unstoppable.**
