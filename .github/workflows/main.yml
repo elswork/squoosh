@@ -15,6 +15,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    environment: elsworkEnvironment
     steps:
       -
         name: Checkout
