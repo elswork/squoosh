@@ -39,8 +39,8 @@ jobs:
         with:
           images: ${{ github.repository }}
           labels: |
-            maintainer="Eloy Lopez <elswork@gmail.com>"
-            org.opencontainers.image.description="squoosh-cli an experimental way to run all the codecs you know from the Squoosh"
+            maintainer='Eloy Lopez <elswork@gmail.com>'
+            org.opencontainers.image.description='squoosh-cli an experimental way to run all the codecs you know from the Squoosh'
             org.opencontainers.image.vendor=Deft.Work
             org.opencontainers.image.url=https://deft.work/squoosh
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
