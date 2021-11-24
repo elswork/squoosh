@@ -37,14 +37,17 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: elswork/squoosh
+          images: ${{ github.repository }}
           labels: |
-            maintainer=Eloy Lopez <elswork@gmail.com>
-            org.opencontainers.image.description=squoosh-cli an experimental way to run all the codecs you know from the Squoosh
+            maintainer="Eloy Lopez <elswork@gmail.com>"
+            org.opencontainers.image.description="squoosh-cli an experimental way to run all the codecs you know from the Squoosh"
             org.opencontainers.image.vendor=Deft.Work
             org.opencontainers.image.url=https://deft.work/squoosh
-            org.opencontainers.image.source=https://github.com/elswork/squoosh
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.version=0.6.5
+          tags: |
+            0.6.5
+            latest
       -
         name: Build and push
         uses: docker/build-push-action@v2
@@ -52,6 +55,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
           push: true
-          #tags: elswork/squoosh:0.6.5, elswork/squoosh:latest
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

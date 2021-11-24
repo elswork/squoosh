@@ -4,9 +4,9 @@ FROM ${BASEIMAGE}
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
-LABEL mantainer=Eloy Lopez <elswork@gmail.com> \
+LABEL mantainer="Eloy Lopez <elswork@gmail.com>" \
     org.opencontainers.image.title=squoosh \
-    org.opencontainers.image.description=squoosh-cli an experimental way to run all the codecs you know from the Squoosh \
+    org.opencontainers.image.description="squoosh-cli an experimental way to run all the codecs you know from the Squoosh" \
     org.opencontainers.image.vendor=Deft.Work \
     org.opencontainers.image.url=https://deft.work/squoosh \
     org.opencontainers.image.source=https://github.com/elswork/squoosh \
