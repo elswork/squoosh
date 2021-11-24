@@ -34,8 +34,8 @@ make start PARAM=someparameter
 Example of usage:
 
 ```bash
-docker run -it --rm elswork/squoosh \
- squoosh-cli --webp auto cover.jpg
+docker run -it --rm -v $(pwd)/data:/data elswork/squoosh \
+squoosh-cli --webp auto cover.jpg
 ```
 
 ---
