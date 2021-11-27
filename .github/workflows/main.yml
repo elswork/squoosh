@@ -20,22 +20,6 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-      - 
-        name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-
-          images: |
-            ${{ github.repository }}
-            ghcr.io/${{ github.repository }}
-          labels: |
-            org.opencontainers.image.url=https://deft.work/squoosh
-            org.opencontainers.image.source=https://github.com/${{ github.repository }}
-            org.opencontainers.image.version=0.6.5
-          tags: |
-            0.6.5
-            latest
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -56,6 +40,25 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      -
+        name: Make Buildx
+        run: make buildx
+      # - 
+      #   name: Extract metadata (tags, labels) for Docker
+      #   id: meta
+      #   uses: docker/metadata-action@v3
+      #   with:
+
+      #     images: |
+      #       ${{ github.repository }}
+      #       ghcr.io/${{ github.repository }}
+      #     labels: |
+      #       org.opencontainers.image.url=https://deft.work/squoosh
+      #       org.opencontainers.image.source=https://github.com/${{ github.repository }}
+      #       org.opencontainers.image.version=0.6.5
+      #     tags: |
+      #       0.6.5
+      #       latest
       # -
       #   name: Build and push
       #   uses: docker/build-push-action@v2
