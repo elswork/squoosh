@@ -2,7 +2,7 @@
 
 A [Docker](http://docker.com) file to build [squoosh-cli](https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli) an experimental way to run all the codecs you know from the [squoosh](https://squoosh.app/).
 
-> Be aware! You should read carefully the usage documentation of every tool!
+> Be aware! You should carefully read the usage documentation of every tool!
 
 ## Details
 
