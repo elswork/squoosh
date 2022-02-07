@@ -1,7 +1,7 @@
 SNAME ?= squoosh
 RNAME ?= elswork/$(SNAME)
 VER ?= `cat VERSION`
-BASENAME ?= node:12.22.1-alpine
+BASENAME ?= node:12-alpine
 TARGET_PLATFORM ?= linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm/v7,linux/arm/v6
 NO_CACHE ?= 
 # NO_CACHE ?= --no-cache
