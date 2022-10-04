@@ -64,3 +64,5 @@ console: ## Start console in container
 	docker run -it --rm -v $(DIR):/data --entrypoint "/bin/ash" $(RNAME):$(MODE)
 start: ## Start an container command
 	docker run -it --rm -v $(DIR):/data $(RNAME):$(MODE) $(PARAM)
+help: ## Show help command
+	docker run -it --rm -v $(DIR):/data $(RNAME):$(MODE) squoosh-cli -h
